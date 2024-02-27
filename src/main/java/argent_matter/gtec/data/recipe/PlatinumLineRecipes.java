@@ -321,14 +321,6 @@ public class PlatinumLineRecipes {
 
         // Osmium Completion <---- Fifth platline output
 
-        CHEMICAL_RECIPES.recipeBuilder("osmium_tetroxide_separation")
-                .inputFluids(HydrochloricAcid.getFluid(6000))
-                .inputFluids(GTECMaterials.OsmiumSolution.getFluid(1000))
-                .outputItems(dust, Osmium,1)
-                .outputFluids(Water.getFluid(2000))
-                .outputFluids(Chlorine.getFluid(7000))
-                .duration(300).EUt(VA[LV]).save(provider);
-
         // Iridium Processing!
 
         BLAST_RECIPES.recipeBuilder(GTExtendedChem.id("iridium_metal_residue_process"))

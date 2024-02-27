@@ -7,6 +7,8 @@ import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.addon.events.MaterialCasingCollectionEvent;
 
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
+
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.data.recipes.FinishedRecipe;
 
 import java.util.function.Consumer;
@@ -60,5 +62,10 @@ public class GTExtendedChemGTAddon implements IGTAddon {
     @Override
     public void addRecipes(Consumer<FinishedRecipe> provider) {
         GTECRecipes.init(provider);
+    }
+
+    @Override
+    public void removeRecipes(Consumer<ResourceLocation> provider) {
+        GTECRecipes.removedInit(provider);
     }
 }
