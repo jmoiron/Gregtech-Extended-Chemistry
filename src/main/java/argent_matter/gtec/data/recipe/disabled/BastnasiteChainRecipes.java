@@ -161,59 +161,65 @@ public class BastnasiteChainRecipes {
                 .outputFluids(Oxygen.getFluid(3000))
                 .duration(70).EUt(VA[MV]).save(provider);
 
-    LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("fluorinated_samaric_residue_dust"))
-            .inputItems(dust, GTECMaterials.SamaricRareEarthConcentrate,1)
-            .inputFluids(HydrofluoricAcid.getFluid(2000))
-            .outputItems(dust, GTECMaterials.FluorinatedSamaricConcentrate,1)
-            .duration(300).EUt(VA[HV]).save(provider);
+        LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("fluorinated_samaric_residue_dust"))
+                .inputItems(dust, GTECMaterials.SamaricRareEarthConcentrate,1)
+                .inputFluids(HydrofluoricAcid.getFluid(2000))
+                .outputItems(dust, GTECMaterials.FluorinatedSamaricConcentrate,1)
+                .duration(300).EUt(VA[HV]).save(provider);
 
-    BLAST_RECIPES.recipeBuilder(GTExtendedChem.id("samarium_terbium_mixture_dust"))
-            .inputItems(dust, GTECMaterials.FluorinatedSamaricConcentrate,8)
-            .inputItems(dust, Calcium,4)
-            .outputItems(dust, Holmium,1)
-            .outputItems(dust, GTECMaterials.SamariumTerbiumMixture,4)
-            .outputFluids(GTECMaterials.CalciumFluoride.getFluid(12000))
-            .blastFurnaceTemp(1200)
-            .duration(1600).EUt(VA[EV]).save(provider);
+        BLAST_RECIPES.recipeBuilder(GTExtendedChem.id("samarium_terbium_mixture_dust"))
+                .inputItems(dust, GTECMaterials.FluorinatedSamaricConcentrate,8)
+                .inputItems(dust, Calcium,4)
+                .outputItems(dust, Holmium,1)
+                .outputItems(dust, GTECMaterials.SamariumTerbiumMixture,4)
+                .outputFluids(GTECMaterials.CalciumFluoride.getFluid(12000))
+                .blastFurnaceTemp(1200)
+                .duration(1600).EUt(VA[EV]).save(provider);
 
-    FLUID_SOLIDFICATION_RECIPES.recipeBuilder(GTExtendedChem.id("calcium_fluoride_solidifaction"))
-            .inputFluids(GTECMaterials.CalciumFluoride.getFluid(1000))
-            .outputItems(dust, GTECMaterials.CalciumFluoride,1)
-            .duration(25).EUt(VA[LV]).save(provider);
+        CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("calcium_fluoride_assembly"))
+            .inputItems(dust, Calcium, 1)
+            .inputFluids(Fluorine.getFluid(2000))
+            .outputItems(dust, GTECMaterials.CalciumFluoride, 3)
+            .duration(120).EUt(VA[MV]).save(provider);
 
-    // Large Chemical Plant To be added if needed
-    LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("hydrated_ammonium_nitrate_slurry"))
-            .circuitMeta(14)
-            .inputFluids(Ammonia.getFluid(4000))
-            .inputFluids(NitricAcid.getFluid(4000))
-            .outputFluids(GTECMaterials.HydratedAmmoniumNitrateSlurry.getFluid(5184))
-            .duration(1200).EUt(VA[MV]).save(provider);
+        FLUID_SOLIDFICATION_RECIPES.recipeBuilder(GTExtendedChem.id("calcium_fluoride_solidifaction"))
+                .inputFluids(GTECMaterials.CalciumFluoride.getFluid(1000))
+                .outputItems(dust, GTECMaterials.CalciumFluoride,1)
+                .duration(25).EUt(VA[LV]).save(provider);
 
-    // Dehydrator To be added!
-    FLUID_SOLIDFICATION_RECIPES.recipeBuilder("ammonium_nitrate_solidifaction")
-            .circuitMeta(8)
-            .inputFluids(GTECMaterials.HydratedAmmoniumNitrateSlurry.getFluid(144))
-            .outputItems(dust, GTECMaterials.AmmoniumNitrate,1)
-            .duration(225).EUt(VA[HV]).save(provider);
+        // Large Chemical Plant To be added if needed
+        LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("hydrated_ammonium_nitrate_slurry"))
+                .circuitMeta(14)
+                .inputFluids(Ammonia.getFluid(4000))
+                .inputFluids(NitricAcid.getFluid(4000))
+                .outputFluids(GTECMaterials.HydratedAmmoniumNitrateSlurry.getFluid(5184))
+                .duration(1200).EUt(VA[MV]).save(provider);
 
-    LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("nitrogenated_samarium_terbium_mixture_dust"))
-            .inputItems(dust, GTECMaterials.SamariumTerbiumMixture,1)
-            .inputItems(dust, GTECMaterials.AmmoniumNitrate,9)
-            .outputItems(dust, GTECMaterials.NitrogenatedSamariumTerbiumMixture,1)
-            .duration(600).EUt(VA[HV]).save(provider);
+        // Dehydrator To be added!
+        FLUID_SOLIDFICATION_RECIPES.recipeBuilder("ammonium_nitrate_solidifaction")
+                .circuitMeta(8)
+                .inputFluids(GTECMaterials.HydratedAmmoniumNitrateSlurry.getFluid(144))
+                .outputItems(dust, GTECMaterials.AmmoniumNitrate,1)
+                .duration(225).EUt(VA[HV]).save(provider);
 
-    LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("samaric_residue_bastnasite_line_completion"))
-            .inputItems(dust, GTECMaterials.NitrogenatedSamariumTerbiumMixture,4)
-            .inputItems(dust, Copper,1)
-            .outputItems(dust, GTECMaterials.TerbiumNitrate,2)
-            .outputItems(dust, GTECMaterials.SamaricResidue,2)
-            .duration(3200).EUt(VA[EV]).save(provider);
+        LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("nitrogenated_samarium_terbium_mixture_dust"))
+                .inputItems(dust, GTECMaterials.SamariumTerbiumMixture,1)
+                .inputItems(dust, GTECMaterials.AmmoniumNitrate,9)
+                .outputItems(dust, GTECMaterials.NitrogenatedSamariumTerbiumMixture,1)
+                .duration(600).EUt(VA[HV]).save(provider);
 
-    ELECTROLYZER_RECIPES.recipeBuilder(GTExtendedChem.id("terbium_completion"))
-            .inputItems(dust, GTECMaterials.TerbiumNitrate,5)
-            .outputItems(dust, Terbium,1)
-            .outputFluids(Oxygen.getFluid(3000))
-            .outputFluids(Nitrogen.getFluid(1000))
-            .duration(32).EUt(VA[MV]).save(provider);
+        LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("samaric_residue_bastnasite_line_completion"))
+                .inputItems(dust, GTECMaterials.NitrogenatedSamariumTerbiumMixture,4)
+                .inputItems(dust, Copper,1)
+                .outputItems(dust, GTECMaterials.TerbiumNitrate,2)
+                .outputItems(dust, GTECMaterials.SamaricResidue,2)
+                .duration(3200).EUt(VA[EV]).save(provider);
+
+        ELECTROLYZER_RECIPES.recipeBuilder(GTExtendedChem.id("terbium_completion"))
+                .inputItems(dust, GTECMaterials.TerbiumNitrate,5)
+                .outputItems(dust, Terbium,1)
+                .outputFluids(Oxygen.getFluid(3000))
+                .outputFluids(Nitrogen.getFluid(1000))
+                .duration(32).EUt(VA[MV]).save(provider);
     }
 }

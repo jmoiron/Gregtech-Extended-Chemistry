@@ -566,7 +566,7 @@ public class GTECMaterials {
     public static final Material CalciumFluoride = new Material.Builder(GTExtendedChem.id("calcium_fluoride"))
             .liquid()
             .dust()
-            .components(Calcium, 1, Oxygen, 2)
+            .components(Calcium, 1, Fluorine, 2)
             .flags(DECOMPOSITION_BY_ELECTROLYZING)
             .color(0xC5CBC4)
             .buildAndRegister()

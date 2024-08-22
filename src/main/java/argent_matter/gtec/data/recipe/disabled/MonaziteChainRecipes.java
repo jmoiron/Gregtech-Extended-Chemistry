@@ -3,6 +3,8 @@ package argent_matter.gtec.data.recipe.disabled;
 
 import argent_matter.gtec.GTExtendedChem;
 import argent_matter.gtec.common.data.GTECMaterials;
+
+import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.sun.jna.platform.win32.WinCrypt;
 import com.sun.jna.platform.win32.WinNT;
 import net.minecraft.client.model.CamelModel;
@@ -79,6 +81,17 @@ public class MonaziteChainRecipes {
                 .outputFluids(GTECMaterials.DilutedMonaziteSulfate.getFluid(7000))
                 .duration(480).EUt(VA[HV]).save(provider);
 
+        CHEMICAL_RECIPES.recipeBuilder("ammonium_nitrate_solution")
+                .inputFluids(Ammonia.getFluid(1000))
+                .inputFluids(NitricAcid.getFluid(1000))
+                .outputFluids(GTECMaterials.AmmoniumNitrateSolution.getFluid(1000))
+                .duration(30).EUt(VA[HV]).save(provider);
+
+        ELECTROLYZER_RECIPES.recipeBuilder("decomposition_ammonium_nitrate_solution")
+                .inputFluids(GTECMaterials.AmmoniumNitrateSolution.getFluid(1000))
+                .outputFluids(Ammonia.getFluid(1000))
+                .outputFluids(NitricAcid.getFluid(1000))
+                .duration(600).EUt(VA[HV]).save(provider);
 
         LARGE_CHEMICAL_RECIPES.recipeBuilder("acidic_monazite_dust")
                 .inputFluids(GTECMaterials.DilutedMonaziteSulfate.getFluid(1000))
