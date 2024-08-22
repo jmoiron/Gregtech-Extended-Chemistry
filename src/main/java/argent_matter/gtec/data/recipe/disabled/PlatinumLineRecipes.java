@@ -548,14 +548,22 @@ public class PlatinumLineRecipes {
                 .outputItems(dust, GTECMaterials.SodiumSulfate,7)
                 .duration(15).EUt(VA[LV]).save(provider);
 
-        // Nickel Replacement
+        // chemical bath replacements
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder("bathe_cooperite_crushed_ore_to_purified_ore")
+            .inputItems(crushed, Cooperite, 1)
+            .inputFluids(Mercury.getFluid(100))
+            .outputItems(crushedPurified, Cooperite, 1)
+            .chancedOutput(dust, GTECMaterials.PalladiumMetallicPowder, 1, 7000, 580)
+            .chancedOutput(dust, Stone, 1, 4000, 650)
+            .duration(200).EUt(VA[LV]).save(provider);
 
         CHEMICAL_BATH_RECIPES.recipeBuilder("bathe_nickel_crushed_ore_to_purified_ore")
-                .inputItems(crushed, Nickel,1)
-                .inputFluids(Mercury.getFluid(100))
-                .outputItems(crushedPurified, Nickel,1)
-                .chancedOutput(dust, GTECMaterials.PlatinumMetallicPowder,1,7000,580)
-                .chancedOutput(dust, Stone,1,4000,650)
-                .duration(600).EUt(VA[LV]).save(provider);
+            .inputItems(crushed, Nickel,1)
+            .inputFluids(Mercury.getFluid(100))
+            .outputItems(crushedPurified, Nickel,1)
+            .chancedOutput(dust, GTECMaterials.PlatinumMetallicPowder,1,7000,580)
+            .chancedOutput(dust, Stone,1,4000,650)
+            .duration(600).EUt(VA[LV]).save(provider);
     }
 }
