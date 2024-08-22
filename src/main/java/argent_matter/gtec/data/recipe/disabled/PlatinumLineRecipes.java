@@ -209,12 +209,12 @@ public class PlatinumLineRecipes {
 
         SIFTER_RECIPES.recipeBuilder(GTExtendedChem.id("rhodium_filter_cake"))
                 .inputItems(dust, GTECMaterials.RhodiumNitrate,1)
-                .chancedOutput(dust, GTECMaterials.RhodiumFilterCake,1,1000,0)
-                .chancedOutput(dust, GTECMaterials.RhodiumFilterCake,1,1000,0)
-                .chancedOutput(dust, GTECMaterials.RhodiumFilterCake,1,1000,0)
-                .chancedOutput(dust, GTECMaterials.RhodiumFilterCake,1,1000,0)
-                .chancedOutput(dust, GTECMaterials.RhodiumFilterCake,1,1000,0)
                 .chancedOutput(dust, GTECMaterials.RhodiumFilterCake,1,1500,0)
+                .chancedOutput(dust, GTECMaterials.RhodiumFilterCake,1,1500,0)
+                .chancedOutput(dust, GTECMaterials.RhodiumFilterCake,1,1500,0)
+                .chancedOutput(dust, GTECMaterials.RhodiumFilterCake,1,1500,0)
+                .chancedOutput(dust, GTECMaterials.RhodiumFilterCake,1,1500,0)
+                .chancedOutput(dust, GTECMaterials.RhodiumFilterCake,1,2000,0)
                 .duration(300).EUt(VA[MV]).save(provider);
 
         CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("sodium_nitrate"))
@@ -226,8 +226,8 @@ public class PlatinumLineRecipes {
 
         MIXER_RECIPES.recipeBuilder(GTExtendedChem.id("rhodium_salt_solution"))
                 .inputItems(dust, GTECMaterials.RhodiumSalt,1)
-                .inputFluids(Water.getFluid(200))
-                .outputFluids(GTECMaterials.RhodiumSaltSolution.getFluid(200))
+                .inputFluids(Water.getFluid(1000))
+                .outputFluids(GTECMaterials.RhodiumSaltSolution.getFluid(1000))
                 .duration(30).EUt(VA[LV]).save(provider);
 
         CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("potassium_disulfate"))
