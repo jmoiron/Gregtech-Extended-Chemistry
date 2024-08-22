@@ -316,6 +316,10 @@ public class PlatinumLineRecipes {
 
         // Osmium Processing Time!
 
+        // diasble vanilla osmium line
+        DISTILLERY_RECIPES.recipeBuilder("acidic_osmium_solution_separation_to_hydrochloric_acid").save(provider);
+        DISTILLERY_RECIPES.recipeBuilder("acidic_osmium_solution_separation_to_water").save(provider);
+
         BLAST_RECIPES.recipeBuilder(GTExtendedChem.id("rarest_metal_residue_ebf"))
                 .inputItems(dust, GTECMaterials.RarestMetalResidue,2)
                 .circuitMeta(2)
