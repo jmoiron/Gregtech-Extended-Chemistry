@@ -32,195 +32,141 @@ public class GTECMaterials {
         Iodine.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.GAS, new FluidBuilder()));
     }
 
+    private static Material.Builder mat(String path, int color) {
+        return new Material.Builder(GTExtendedChem.id(path)).color(color);
+    }
+
+    private static Material.Builder dust(String path, int color, MaterialIconSet icon) {
+        return mat(path, color).dust(1).iconSet(icon);
+    }
+
+    private static Material dust(String path, int color, MaterialIconSet icon, String formula) {
+        return dust(path, color, icon).buildAndRegister().setFormula(formula, true);
+    }
+
+    private static Material dust(String path, int color, String formula) {
+        return mat(path, color).dust(1).buildAndRegister().setFormula(formula, true);
+    }
+
+    private static Material.Builder liquid(String path, int color, MaterialIconSet icon) {
+        return mat(path, color).liquid().iconSet(icon);
+    }
+
+    private static Material liquid(String path, int color, String formula) {
+        return mat(path, color).liquid().buildAndRegister().setFormula(formula, true);
+    }
 
     // PlatinumLine
-    public static final Material PlatinumMetallicPowder = new Material.Builder(GTExtendedChem.id("platinum_metallic_powder"))
-            .dust(1)
-            .color(0xF0EC9A).iconSet(MaterialIconSet.BRIGHT)
-            .buildAndRegister()
-            .setFormula("??PtPdIrOsRhRu??", true);
+    public static final Material PlatinumMetallicPowder =
+        dust("platinum_metallic_powder", 0xF0EC9A, BRIGHT, "PtPdIrOsRhRu??");
 
-    public static final Material PlatinumResidue = new Material.Builder(GTExtendedChem.id("platinum_residue"))
-            .dust(1)
-            .color(0x64601C)
-            .buildAndRegister()
-            .setFormula("??IrOsRhRu??", true);
+    public static final Material PlatinumResidue =
+        dust("platinum_residue", 0x64601C, "IrOsRhRu??");
 
-    public static final Material PlatinumConcentrate = new Material.Builder(GTExtendedChem.id("platinum_concentrate"))
-            .liquid()
-            .color(0xF0EC9A).iconSet(MaterialIconSet.BRIGHT)
-            .buildAndRegister();
+    public static final Material PlatinumConcentrate =
+        liquid("platinum_concentrate", 0xF0EC9A, BRIGHT).buildAndRegister();
 
-    public static final Material PlatinumSalt = new Material.Builder(GTExtendedChem.id("platinum_salt"))
-            .dust(1)
-            .color(0xF0EC9A).iconSet(MaterialIconSet.DULL)
-            .buildAndRegister();
+    public static final Material PlatinumSalt =
+        dust("platinum_salt", 0xF0EC9A, DULL).buildAndRegister();
 
-    public static final Material RefinedPlatlinumSalt = new Material.Builder(GTExtendedChem.id("refined_platinum_salt"))
-            .dust(1)
-            .color(0xF0EC9A).iconSet(MaterialIconSet.BRIGHT)
-            .buildAndRegister();
+    public static final Material RefinedPlatlinumSalt =
+        dust("refined_platinum_salt", 0xF0EC9A, BRIGHT).buildAndRegister();
 
-    public static final Material ReprecipitatedPlatinum = new Material.Builder(GTExtendedChem.id("reprecipitated_platinum"))
-            .dust(1)
-            .color(0xF0EC9A).iconSet(MaterialIconSet.BRIGHT)
-            .buildAndRegister()
-            .setFormula("PtCl", true);
+    public static final Material ReprecipitatedPlatinum =
+        dust("reprecipitated_platinum", 0xF0EC9A, BRIGHT, "PtCl");
 
-    public static final Material PalladiumEnrichedAmmonia = new Material.Builder(GTExtendedChem.id("palladium_enriched_ammonia"))
-            .liquid()
-            .color(0x65655E)
-            .buildAndRegister()
-            .setFormula("?Pd", true);
+    public static final Material PalladiumEnrichedAmmonia =
+        liquid("palladium_enriched_ammonia", 0x65655E, "?Pd");
 
-    public static final Material PalladiumMetallicPowder = new Material.Builder(GTExtendedChem.id("palladium_metallic_powder"))
-            .dust(1)
-            .color(0x65655E).iconSet(ROUGH)
-            .buildAndRegister()
-            .setFormula("??Pd??", true);
+    public static final Material PalladiumMetallicPowder =
+        dust("palladium_metallic_powder", 0x65655E, ROUGH, "??Pd??");
 
-    public static final Material PalladiumSalt = new Material.Builder(GTExtendedChem.id("palladium_salt"))
-            .dust(1)
-            .color(0x65655E).iconSet(METALLIC)
-            .buildAndRegister();
+    public static final Material PalladiumSalt =
+        dust("palladium_salt", 0x65655E, METALLIC).buildAndRegister();
 
-    public static final Material ReprecipitatedPalladium = new Material.Builder(GTExtendedChem.id("reprecipitated_palladium"))
-            .dust(1)
-            .color(0x65655E).iconSet(METALLIC)
-            .buildAndRegister()
-            .setFormula("Pd2NH4", true);
+    public static final Material ReprecipitatedPalladium =
+        dust("reprecipitated_palladium", 0x65655E, METALLIC, "Pd2NH4");
 
-    public static final Material FormicAcid = new Material.Builder(GTExtendedChem.id("formic_acid"))
-            .liquid()
-            .color(0xDCA358)
-            .buildAndRegister()
-            .setFormula("CH2O2", true);
+    public static final Material FormicAcid =
+        liquid("formic_acid", 0xDCA358, "CH2O2");
 
-    public static final Material PotassiumDisulfate = new Material.Builder(GTExtendedChem.id("potassium_disulfate"))
-            .dust(1)
-            .color(0xEEA23E)
-            .buildAndRegister()
-            .setFormula("K2S2O7", true);
+    public static final Material PotassiumDisulfate =
+        dust("potassium_disulfate", 0xEEA23E, "K2S2O7");
 
-    public static final Material RhodiumSulfateSolution = new Material.Builder(GTExtendedChem.id("diluted_rhodium_sulfate_solution"))
-            .liquid()
-            .color(0xDB973B)
-            .buildAndRegister();
+    public static final Material RhodiumSulfateSolution =
+        mat("diluted_rhodium_sulfate_solution", 0xDB973B).liquid().buildAndRegister();
 
-    public static final Material LeachResidue = new Material.Builder(GTExtendedChem.id("leach_residue"))
-            .dust(1)
-            .color(0x543A17)
-            .buildAndRegister()
-            .setFormula("??IrOsRu??", true);
+    public static final Material LeachResidue =
+        dust("leach_residue", 0x543A17, "??IrOsRu??");
 
-    public static final Material CrudeRhodiumMetal = new Material.Builder(GTExtendedChem.id("crude_rhodium_metal"))
-            .dust(1)
-            .color(0xDB973B).iconSet(ROUGH)
-            .buildAndRegister()
-            .setFormula("??Rh??", true);
+    public static final Material CrudeRhodiumMetal =
+        dust("crude_rhodium_metal", 0xDB973B, ROUGH, "??Rh??");
 
-    public static final Material RhodiumSalt = new Material.Builder(GTExtendedChem.id("rhodium_salt"))
-            .dust(1)
-            .color(0xDB973B).iconSet(SHINY)
-            .buildAndRegister();
+    public static final Material RhodiumSalt =
+        dust("rhodium_salt", 0xDB973B, SHINY).buildAndRegister();
 
-    public static final Material RhodiumSaltSolution = new Material.Builder(GTExtendedChem.id("rhodium_salt_solution"))
-            .liquid()
-            .color(0x91AEC4)
-            .buildAndRegister();
+    public static final Material RhodiumSaltSolution =
+        mat("rhodium_salt_solution", 0x91AEC4).liquid().buildAndRegister();
 
-    public static final Material ZincSulfate = new Material.Builder(GTExtendedChem.id("zinc_sulfate"))
-            .dust(1)
-            .color(0x7C4D0E).iconSet(METALLIC)
-            .buildAndRegister()
-            .setFormula("ZnSO4", true);
+    public static final Material ZincSulfate =
+        dust("zinc_sulfate", 0x7C4D0E, METALLIC, "ZnSO4");
 
-    public static final Material SodiumNitrate = new Material.Builder(GTExtendedChem.id("sodium_nitrate"))
-            .dust(1)
-            .color(0x498EC2)
-            .buildAndRegister()
-            .setFormula("NaNO3", true);
+    public static final Material SodiumNitrate =
+        dust("sodium_nitrate", 0x498EC2, "NaNO3");
 
-    public static final Material RhodiumNitrate = new Material.Builder(GTExtendedChem.id("rhodium_nitrate"))
-            .dust(1)
-            .color(0x614A0F).iconSet(METALLIC)
-            .buildAndRegister();
+    public static final Material RhodiumNitrate =
+        dust("rhodium_nitrate", 0x614A0F, METALLIC).buildAndRegister();
 
-    public static final Material RhodiumFilterCake = new Material.Builder(GTExtendedChem.id("rhodium_filter_cake"))
-            .dust(1)
-            .color(0x614A0F).iconSet(METALLIC)
-            .buildAndRegister();
+    public static final Material RhodiumFilterCake =
+        dust("rhodium_filter_cake", 0x614A0F, METALLIC).buildAndRegister();
 
-    public static final Material RhodiumFilterCakeSolution = new Material.Builder(GTExtendedChem.id("rhodium_filter_cake_solution"))
-            .liquid()
-            .color(0x4C6584)
-            .buildAndRegister();
+    public static final Material RhodiumFilterCakeSolution =
+        mat("rhodium_filter_cake_solution", 0x4C6584).liquid().buildAndRegister();
 
-    public static final Material ReprecipitatedRhodium = new Material.Builder(GTExtendedChem.id("reprecipitated_rhodium"))
-            .dust(1)
-            .color(0xDB973B).iconSet(SHINY)
-            .buildAndRegister()
-            .setFormula("Rh2NH4", true);
+    public static final Material ReprecipitatedRhodium =
+        dust("reprecipitated_rhodium", 0xDB973B, SHINY, "Rh2NH4");
 
-    public static final Material RarestMetalResidue = new Material.Builder(GTExtendedChem.id("rarest_metal_residue"))
-            .dust(1)
-            .color(0x5C4E35).iconSet(METALLIC)
-            .buildAndRegister()
-            .setFormula("??OsIr??", true);
+    public static final Material RarestMetalResidue =
+        dust("rarest_metal_residue", 0x5C4E35, METALLIC, "??OsIr??");
 
-    public static final Material SodiumRuthenate = new Material.Builder(GTExtendedChem.id("sodium_ruthenate"))
-            .dust(1)
-            .color(0x3290BD).iconSet(ROUGH)
-            .buildAndRegister()
-            .setFormula("Na2RuO3", true);
+    public static final Material SodiumRuthenate =
+        dust("sodium_ruthenate", 0x3290BD, ROUGH, "Na2RuO3");
 
-    public static final Material RutheniumTetroxideSolution = new Material.Builder(GTExtendedChem.id("ruthenium_tetroxide_solution"))
-            .liquid()
-            .color(0x9FAAAF)
+    public static final Material RutheniumTetroxideSolution =
+        liquid("ruthenium_tetroxide_solution", 0x9FAAAF, "???");
+
+    public static final Material HotRutheniumTetroxideSolution =
+        mat("hot_ruthenium_tetroxide_solution", 0x9FAAAF).gas()
             .buildAndRegister()
             .setFormula("???", true);
 
-    public static final Material HotRutheniumTetroxideSolution = new Material.Builder(GTExtendedChem.id("hot_ruthenium_tetroxide_solution"))
-            .gas()
-            .color(0x9FAAAF)
-            .buildAndRegister()
-            .setFormula("???", true);
+    public static final Material OsmiumSolution =
+        liquid("osmium_solution", 0x7E6642, "???");
 
-    public static final Material OsmiumSolution = new Material.Builder(GTExtendedChem.id("osmium_solution"))
-            .liquid()
-            .color(0x7E6642)
-            .buildAndRegister()
-            .setFormula("???", true);
-
-    public static final Material SludgeDustResidue = new Material.Builder(GTExtendedChem.id("sludge_dust_residue"))
-            .dust(1)
-            .color(0x775A30)
+    public static final Material SludgeDustResidue =
+        mat("sludge_dust_residue", 0x775A30).dust(1)
             .flags(DECOMPOSITION_BY_CENTRIFUGING)
             .components(SiliconDioxide, 3, Gold, 2)
             .buildAndRegister()
             .setFormula("(SiO2)3Au2", true);
 
-    public static final Material IridiumDioxide = new Material.Builder(GTExtendedChem.id("iridium_dioxide"))
-            .dust(1)
-            .color(0x694B20).iconSet(ROUGH)
+    public static final Material IridiumDioxide =
+        dust("iridium_dioxide", 0x694B20, ROUGH)
             .flags(DISABLE_DECOMPOSITION)
             .components(Iridium, 1, Oxygen, 2)
             .buildAndRegister()
             .setFormula("IrO2", true);
 
-    public static final Material MetallicSludgeResidue = new Material.Builder(GTExtendedChem.id("metallic_sludge_residue"))
-            .dust(1)
-            .color(0x694B20).iconSet(ROUGH)
+    public static final Material MetallicSludgeResidue =
+        dust("metallic_sludge_residue", 0x694B20, ROUGH)
             .flags(DECOMPOSITION_BY_CENTRIFUGING)
             .components(Nickel, 1, Copper, 1)
             .buildAndRegister()
             .setFormula("NiCu", true);
 
-    public static final Material AcidicIridiumSolution = new Material.Builder(GTExtendedChem.id("acidic_iridium_solution"))
-            .liquid()
-            .color(0x694B20)
-            .buildAndRegister()
-            .setFormula("???", true);
+    public static final Material AcidicIridiumSolution =
+        liquid("acidic_iridium_solution", 0x694B20, "???");
+
     // Monazite Chain Materials
 
     public static final Material MuddyMonaziteRareEarthSolution = new Material.Builder(GTExtendedChem.id("muddy_monazite_rare_earth_solution"))
@@ -651,7 +597,7 @@ public class GTECMaterials {
 
 }
 
-// The New Platinum Line Stuff
+    // The New Platinum Line Stuff
 
     /*
     public static final Material RoastedCooperite = new Material.Builder(GTExtendedChem.id("roasted_cooperite"))
