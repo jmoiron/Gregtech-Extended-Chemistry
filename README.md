@@ -1,18 +1,13 @@
 <p align="center"><img src="https://cdn.discordapp.com/attachments/1098905706469539860/1213919118244188221/logo1.png?ex=65f73947&is=65e4c447&hm=e0024d1d5ae9595097cb70218e6eb923ff92980f3dd22bef0ea4fcc7d1d12603&" alt="Logo"></p>
-<h1 align="center">Gregtech: Extended Chemistry</h1>
-<p align="center">Using <a href="https://github.com/GregTechCEu/GregTech-Modern"> GregTech CEu Modern</a></i></b></p>
-<h1 align="center">
-    <a href="https://github.com/Argent-Matter/Gregtech-Extended-Chemistry/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Nomi-CEu/Nomi-CEu?style=for-the-badge&logo=github" alt="License"></a>
-    <a href="https://discord.gg/bmsXZGHQUx"><img src="https://dcbadge.vercel.app/api/server/9eGYEDc7s9"/>
-    <br>
-        <img alt="CurseForge Downloads" src="https://img.shields.io/curseforge/dt/982880?style=plastic">
-        <img alt="CurseForge Version" src="https://img.shields.io/curseforge/v/982880?style=plastic">
-</h1>
 
-  ## Features:
+# Gregtech: Extended Chemistry Extended
 
- - Harder Monazite/Platinum Line (Modified Versions From GTNH)
- - New Custom Echo Circuit Chain, quite fitting to the Modern Theme (NYI)
- - Many More Chains to come in the feature
+This is a fork of [Gregtech: Extended Chemistry](https://www.curseforge.com/minecraft/mc-mods/gregtech-extended-chemistry), which is no longer maintained.
 
-   PS: I know the mod is a bit Bare Bones for now but i'm actively adding new stuff!
+Comparison to GT:EC:
+
+* retain monazite, bastnasite & platinum chains (with fixes)
+* keep compatible with changes in [GTCEu Modern](https://github.com/GregTechCEu/GregTech-Modern)
+* remove echo circuit / naquadah stubs which were never in a state to impact gameplay
+
+Credit to the original author, [NemEzanevem](https://github.com/NemEzanevem) for doing most of the design.

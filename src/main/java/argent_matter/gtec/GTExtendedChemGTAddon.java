@@ -7,7 +7,6 @@ import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.addon.events.MaterialCasingCollectionEvent;
 
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
-import com.gregtechceu.gtceu.common.data.GTBlocks;
 import net.minecraft.data.recipes.FinishedRecipe;
 
 import java.util.function.Consumer;

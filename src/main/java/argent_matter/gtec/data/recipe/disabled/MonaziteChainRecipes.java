@@ -224,7 +224,7 @@ public class MonaziteChainRecipes {
                 .blastFurnaceTemp(2700)
                 .duration(600).EUt(VA[EV]).save(provider);
 
-        CHEMICAL_RECIPES.recipeBuilder("hafnium_idodide")
+        CHEMICAL_RECIPES.recipeBuilder("hafnium_iodide")
                 .inputItems(dust, GTECMaterials.LowPurityHafnium,1)
                 .circuitMeta(1)
                 .inputFluids(Iodine.getFluid(4000))
@@ -367,4 +367,3 @@ public class MonaziteChainRecipes {
     }
 
 }
-

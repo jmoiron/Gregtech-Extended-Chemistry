@@ -14,7 +14,7 @@ license = "LGPLv3" # Want to make your mod open source? Check out https://choose
     # The version number of the mod - unlike in the Forge MDK,
     # we'll use the processResources task to replace this for us
     version = "${version}"
-    displayName = "Gregtech Extended Chemistry"
+    displayName = "Gregtech Extended Chemistry Extended"
     # This URL will be queried by the Forge update checker in order to find the latest version of your mod.
     # If an update is found, you'll see a little blinking "emerald" symbol on your Mods button!
     # updateJSONURL="https://changeme.dev/updates.json" #optional
@@ -25,7 +25,7 @@ license = "LGPLv3" # Want to make your mod open source? Check out https://choose
     # Some more fluff displayed in the Mods panel. Feel free to issue your special thanks here!
     # credits="Thanks to Mojang for making this great game" #optional
     # Some more fluff displayed in the Mods panel. Plug your stuff here!
-    authors="NemEzanevem, screret" #optional
+    authors="NemEzanevem, screret, jmoiron" #optional
     # A multi-line description for your mod. This has no minimum length, but it *is* required!
     description = '''
     An addon to GregtechCEu Modern for those who deem gregtech too easy in its current state.
