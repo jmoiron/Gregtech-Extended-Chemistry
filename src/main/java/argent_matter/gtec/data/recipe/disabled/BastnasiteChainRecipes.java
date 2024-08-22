@@ -172,7 +172,7 @@ public class BastnasiteChainRecipes {
                 .inputItems(dust, Calcium,4)
                 .outputItems(dust, Holmium,1)
                 .outputItems(dust, GTECMaterials.SamariumTerbiumMixture,4)
-                .outputFluids(GTECMaterials.CalciumFluoride.getFluid(12000))
+                .outputFluids(GTECMaterials.CalciumFluoride.getFluid(144 * 12))
                 .blastFurnaceTemp(1200)
                 .duration(1600).EUt(VA[EV]).save(provider);
 
@@ -183,7 +183,7 @@ public class BastnasiteChainRecipes {
             .duration(120).EUt(VA[MV]).save(provider);
 
         FLUID_SOLIDFICATION_RECIPES.recipeBuilder(GTExtendedChem.id("calcium_fluoride_solidifaction"))
-                .inputFluids(GTECMaterials.CalciumFluoride.getFluid(1000))
+                .inputFluids(GTECMaterials.CalciumFluoride.getFluid(144))
                 .outputItems(dust, GTECMaterials.CalciumFluoride,1)
                 .duration(25).EUt(VA[LV]).save(provider);
 
