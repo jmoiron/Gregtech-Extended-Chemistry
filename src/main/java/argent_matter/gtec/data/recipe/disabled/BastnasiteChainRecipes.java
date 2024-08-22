@@ -47,7 +47,7 @@ public class BastnasiteChainRecipes {
                 .outputFluids(GTECMaterials.HexafluorosilicAcid.getFluid(1000))
                 .duration(400).EUt(VA[MV]).save(provider);
 
-        LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("hexafluorosilic_acid"))
+        LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("sodium_fluorosilicate"))
                 .inputItems(dust, Salt,4)
                 .inputFluids(GTECMaterials.HexafluorosilicAcid.getFluid(1000))
                 .outputFluids(HydrochloricAcid.getFluid(2000))
