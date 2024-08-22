@@ -153,8 +153,8 @@ public class PlatinumLineRecipes {
 
         BLAST_RECIPES.recipeBuilder(GTExtendedChem.id("rhodium_sulfate"))
                 .inputItems(dust, GTECMaterials.PlatinumResidue,1)
-                .circuitMeta(2)
                 .inputItems(dustSmall, GTECMaterials.PotassiumDisulfate, 2)
+                .circuitMeta(2)
                 .outputFluids(RhodiumSulfate.getFluid(360))
                 .outputItems(dust, GTECMaterials.LeachResidue, 1)
                 .blastFurnaceTemp(775)
@@ -184,6 +184,8 @@ public class PlatinumLineRecipes {
                 .outputItems(dust, GTECMaterials.ZincSulfate,6)
                 .outputItems(dust, GTECMaterials.CrudeRhodiumMetal,1)
                 .duration(300).EUt(VA[LV]).save(provider);
+
+        ELECTROLYZER_RECIPES.recipeBuilder("rhodium_sulfate_separation").save(provider);
 
         BLAST_RECIPES.recipeBuilder(GTExtendedChem.id("rhodium_salt_ebf"))
                 .inputItems(dust, GTECMaterials.CrudeRhodiumMetal,1)
