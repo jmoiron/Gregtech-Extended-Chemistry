@@ -23,7 +23,7 @@ public class PlatinumLineRecipes {
                 .inputItems(dust, GTECMaterials.PlatinumMetallicPowder)
                 .circuitMeta(1)
                 .inputFluids(AquaRegia.getFluid(1000))
-                .outputItems(dustSmall, GTECMaterials.PlatinumResidue)
+                .outputItems(dustTiny, GTECMaterials.PlatinumResidue)
                 .outputFluids(GTECMaterials.PlatinumConcentrate.getFluid(1000))
                 .duration(250).EUt(VA[LV]).save(provider);
 

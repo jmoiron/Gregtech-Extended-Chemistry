@@ -78,6 +78,13 @@ configurations {
 
 repositories {
     mavenLocal()
+    maven {
+        name = 'GTCEu Maven'
+        url = 'https://maven.gtceu.com'
+        content {
+            includeGroup 'com.gregtechceu.gtceu'
+        }
+    }
     // mavens for Forge-exclusives
     maven { url = "https://api.modrinth.com/maven" } // Jade
     maven { url = "https://maven.theillusivec4.top/" } // Curios
