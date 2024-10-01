@@ -1,24 +1,14 @@
 package argent_matter.gtec.data.recipe.disabled;
 
-
 import net.minecraft.data.recipes.FinishedRecipe;
 import argent_matter.gtec.GTExtendedChem;
 import argent_matter.gtec.common.data.GTECMaterials;
-import net.minecraft.data.recipes.FinishedRecipe;
 
-import java.util.Objects;
 import java.util.function.Consumer;
 import static com.gregtechceu.gtceu.api.GTValues.*;
 import static com.gregtechceu.gtceu.api.data.tag.TagPrefix.*;
 import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
 import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.*;
-import net.minecraft.data.recipes.FinishedRecipe;
-
-import java.util.function.Consumer;
-import net.minecraft.world.item.crafting.BlastingRecipe;
-
-import javax.swing.plaf.multi.MultiViewportUI;
-import java.util.function.Consumer;
 
 public class BastnasiteChainRecipes {
 
@@ -26,6 +16,12 @@ public class BastnasiteChainRecipes {
         bastnasitechainProcesses(provider);
     }
     public static void bastnasitechainProcesses(Consumer<FinishedRecipe> provider) {
+        EXTRACTOR_RECIPES.recipeBuilder(GTExtendedChem.id("extract_bastnasite_dust"))
+                .inputItems(dust, Bastnasite, 1)
+                .outputItems(dustSmall, RareEarth, 1)
+                .outputFluids(Fluorine.getFluid(200))
+                .duration(64).EUt(VHA[MV]).save(provider);
+
         BLAST_RECIPES.recipeBuilder(GTExtendedChem.id("muddy_bastnasite_rare_earth_solution"))
                 .inputItems(crushed, Bastnasite,2)
                 .inputFluids(NitricAcid.getFluid(700))
