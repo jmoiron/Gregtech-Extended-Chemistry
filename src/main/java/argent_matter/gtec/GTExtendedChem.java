@@ -1,7 +1,6 @@
 package argent_matter.gtec;
 
 import argent_matter.gtec.common.data.*;
-import argent_matter.gtec.registry.GTECCreativeModeTabs;
 import argent_matter.gtec.registry.GTECRegistries;
 import argent_matter.gtec.data.GTECDatagen;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
@@ -10,7 +9,6 @@ import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEv
 import com.gregtechceu.gtceu.api.data.chemical.material.event.PostMaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.registry.MaterialRegistry;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
-import com.gregtechceu.gtceu.api.machine.multiblock.CleanroomType;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.config.ConfigHolder;
 import net.minecraft.resources.ResourceLocation;
@@ -22,7 +20,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class GTExtendedChem {
     public static final String MOD_ID = "gtec";
 
-    public static final CleanroomType CLEANER_ROOM = new CleanroomType("cleanerroom", "gtec.recipe.cleanerroom.displayname");
     public static MaterialRegistry MATERIAL_REGISTRY;
 
     public GTExtendedChem() {
@@ -36,8 +33,6 @@ public class GTExtendedChem {
 
         //.init();
         GTECRecipeTypes.init();
-        GTECItems.init();
-        GTECCreativeModeTabs.init();
         GTECMachines.init();
         GTECDatagen.init();
         GTECRegistries.REGISTRATE.registerRegistrate();
@@ -72,4 +67,3 @@ public class GTExtendedChem {
         GTECMachines.init();
     }
 }
-
