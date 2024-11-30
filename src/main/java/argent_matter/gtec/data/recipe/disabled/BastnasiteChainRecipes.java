@@ -58,11 +58,13 @@ public class BastnasiteChainRecipes {
                 .duration(800).EUt(VA[MV]).save(provider);
 
         // Disollution Tank Soon to be added!
-        BLAST_RECIPES.recipeBuilder(GTExtendedChem.id("diluted_bastnasite_mud"))
+        // XXX: EBF cannot have multiple input fluids
+        MIXER_RECIPES.recipeBuilder(GTExtendedChem.id("diluted_bastnasite_mud"))
                 .inputItems(dust, Saltpeter,1)
                 .inputFluids(GTECMaterials.ConditionedBastnasiteMud.getFluid(1000))
                 .inputFluids(Water.getFluid(10000))
                 .outputFluids(GTECMaterials.DilutedBastnasiteMud.getFluid(11000))
+                .circuitMeta(2)
                 .blastFurnaceTemp(2400)
                 .duration(1000).EUt(VA[EV]).save(provider);
 
@@ -183,12 +185,19 @@ public class BastnasiteChainRecipes {
                 .outputItems(dust, GTECMaterials.CalciumFluoride,1)
                 .duration(25).EUt(VA[LV]).save(provider);
 
+        MIXER_RECIPES.recipeBuilder(GTExtendedChem.id("hydrated_ammonium_nitrate_slurry_from_solution"))
+                .inputFluids(GTECMaterials.AmmoniumNitrateSolution.getFluid(4000))
+                .inputFluids(Water.getFluid(10000))
+                .outputFluids(GTECMaterials.HydratedAmmoniumNitrateSlurry.getFluid(5184))
+                .duration(1200).EUt(VA[MV]).save(provider);
+
         // Large Chemical Plant To be added if needed
         LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("hydrated_ammonium_nitrate_slurry"))
-                .circuitMeta(14)
                 .inputFluids(Ammonia.getFluid(4000))
                 .inputFluids(NitricAcid.getFluid(4000))
+                .inputFluids(Water.getFluid(10000))
                 .outputFluids(GTECMaterials.HydratedAmmoniumNitrateSlurry.getFluid(5184))
+                .circuitMeta(15)
                 .duration(1200).EUt(VA[MV]).save(provider);
 
         // Dehydrator To be added!
