@@ -242,7 +242,8 @@ public class PlatinumLineRecipes {
         CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("ammonium_chloride"))
                 .inputFluids(HydrochloricAcid.getFluid(1000))
                 .inputFluids(Ammonia.getFluid(1000))
-                .outputItems(dust, AmmoniumChloride,1)
+                .outputItems(dust, AmmoniumChloride, 2)
+                .circuitMeta(2)
                 .duration(400).EUt(VA[MV]).save(provider);
 
         MIXER_RECIPES.recipeBuilder(GTExtendedChem.id("rhodium_filter_cake_solution"))

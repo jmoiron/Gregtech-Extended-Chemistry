@@ -101,8 +101,8 @@ repositories {
         url "https://maven.k-4u.nl"
     }
     maven {
-        // saps.dev Maven (KubeJS and Rhino)
-        url = "https://maven.saps.dev/minecraft"
+        // Official KubeJS and Rhino Maven
+        url = "https://maven.latvian.dev/releases"
         content {
             includeGroup "dev.latvian.mods"
         }
@@ -120,7 +120,11 @@ repositories {
         name = "Jared's maven"
         url = "https://maven.blamejared.com/"
     } // JEI
-    maven { url 'https://jitpack.io' } // MixinExtras
+    maven { url 'https://jitpack.io'
+        content { // kubejs
+            includeGroup "com.github.rtyley"
+        }
+    } // MixinExtras
     maven {
         // location of a maven mirror for JEI files, as a fallback
         name = "ModMaven"

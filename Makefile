@@ -1,10 +1,10 @@
 
 all:
-	gradlew build
+	./gradlew build
 
 data:
 	rm -rf bin/main
-	gradlew runData
+	./gradlew runData
 
 clean:
-	gradlew clean
+	./gradlew clean
