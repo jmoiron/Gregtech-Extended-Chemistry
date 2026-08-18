@@ -24,7 +24,7 @@ public class MonaziteChainRecipes {
                 .inputFluids(NitricAcid.getFluid(700))
                 .outputItems(dust,SiliconDioxide,1)
                 .outputFluids(GTECMaterials.MuddyMonaziteRareEarthSolution.getFluid(400))
-                .blastFurnaceTemp(2400)
+                .blastFurnaceTemp(800)
                 .duration(400).EUt(VA[EV]).save(provider);
 
         LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("monazite_rare_earth_solution_dilution"))
@@ -52,10 +52,21 @@ public class MonaziteChainRecipes {
         CHEMICAL_BATH_RECIPES.recipeBuilder(GTExtendedChem.id("rare_earth_recycle"))
                 .inputItems(dust, RareEarth, 3)
                 .inputFluids(SulfuricAcid.getFluid(1000))
-                .outputItems(crushed, Monazite, 2)
-                .outputItems(crushed, Monazite, 2)
-                .outputItems(crushed, Monazite, 2)
+                .outputItems(crushed, GTECMaterials.Euxenite, 2)
+                .outputItems(crushed, GTECMaterials.Euxenite, 2)
+                .outputItems(crushed, GTECMaterials.Euxenite, 2)
                 .duration(1200).EUt(VA[HV]).save(provider);
+
+        ELECTROLYZER_RECIPES.recipeBuilder("decomposition_electrolyzing_euxenite")
+                .inputItems(dust, GTECMaterials.Euxenite, 9)
+                .outputItems(dust, Yttrium, 1)
+                .outputItems(dust, NetherQuartz, 1)
+                .outputItems(dust, Galena, 1)
+                .outputItems(dust, Chalcopyrite, 1)
+                .outputItems(dust, Cadmium, 1)
+                .outputItems(dust, GTECMaterials.CalciumFluoride, 1)
+                .outputFluids(Oxygen.getFluid(3000))
+                .duration(400).EUt(VA[HV]).save(provider);
 
         ELECTROLYZER_RECIPES.recipeBuilder("decomposition_electrolyzing_monazite")
                 .inputFluids(GTECMaterials.DilutedMonaziteRareEarthMud.getFluid(1000))
@@ -131,7 +142,7 @@ public class MonaziteChainRecipes {
 
         MIXER_RECIPES.recipeBuilder("nitric_leached_monazite_mixture")
                 .inputFluids(Water.getFluid(1000))
-                .inputFluids(GTECMaterials.NitrogenatedMonaziteRareEarthConcentrate.getFluid(100))
+                .inputFluids(GTECMaterials.NitrogenatedMonaziteRareEarthConcentrate.getFluid(1000))
                 .outputFluids(GTECMaterials.NitricLeachedMonaziteMixture.getFluid(1000))
                 .duration(200).EUt(VA[MV]).save(provider);
 
@@ -149,7 +160,8 @@ public class MonaziteChainRecipes {
         ELECTROMAGNETIC_SEPARATOR_RECIPES.recipeBuilder("cooled_monazite_separation")
                 .inputItems(dust, GTECMaterials.CooledMonaziteRareEarthConcentrate,1)
                 .chancedOutput(dust, GTECMaterials.MonaziteRarerEarthSediment,9000,0)
-                .chancedOutput(dust, GTECMaterials.EuropiumIIIOxide,5,500,0)
+                .chance(500).tierChanceBoost(0)
+                .outputItems(dust, GTECMaterials.EuropiumIIIOxide,5)
                 .duration(600).EUt(VA[EV]).save(provider);
 
         BLAST_RECIPES.recipeBuilder("heterogenous_halogenic_rare_earth")

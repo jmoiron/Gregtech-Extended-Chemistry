@@ -296,7 +296,14 @@ public class GTECMaterials {
             .buildAndRegister()
             .setFormula("????", true);
 
-    public static final Material MonaziteRarerEarthSediment = new Material.Builder(GTExtendedChem.id("monaziterarer_earth_sediment"))
+    public static final Material Euxenite = new Material.Builder(GTExtendedChem.id("euxenite"))
+            .dust(1)
+            .ore(1, 0)
+            .color(0x0B502B).iconSet(METALLIC)
+            .buildAndRegister()
+            .setFormula("????", true);
+
+    public static final Material MonaziteRarerEarthSediment = new Material.Builder(GTExtendedChem.id("monazite_rarer_earth_sediment"))
             .dust(1)
             .color(0x5B480B).iconSet(METALLIC)
             .buildAndRegister()
@@ -493,7 +500,7 @@ public class GTECMaterials {
             .color(0xA6501E)
             .buildAndRegister();
 
-    public static final Material AcidLeachedBastnasiteRareEarthOxides = new Material.Builder(GTExtendedChem.id("acid_leached_astnasite_rare_earth_oxides"))
+    public static final Material AcidLeachedBastnasiteRareEarthOxides = new Material.Builder(GTExtendedChem.id("acid_leached_bastnasite_rare_earth_oxides"))
             .dust(1).iconSet(ROUGH)
             .color(0xA6501E)
             .buildAndRegister()

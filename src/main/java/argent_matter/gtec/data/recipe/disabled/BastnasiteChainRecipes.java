@@ -112,7 +112,7 @@ public class BastnasiteChainRecipes {
 
         CENTRIFUGE_RECIPES.recipeBuilder(GTExtendedChem.id("cerium_oxidesed_rare_earth_oxides_dust_separation"))
                 .inputItems(dust, GTECMaterials.CeriumOxidisedRareEarthOxides,1)
-                .outputItems(dust, GTECMaterials.BastnasiteRareEarthOxides,1)
+                .chancedOutput(dust, GTECMaterials.BastnasiteRareEarthOxides,1,9500,0)
                 .chancedOutput(dust, GTECMaterials.CeriumDioxide,1,7000,0)
                 .duration(600).EUt(VA[HV]).save(provider);
 
@@ -218,6 +218,7 @@ public class BastnasiteChainRecipes {
                 .inputItems(dust, Copper,1)
                 .outputItems(dust, GTECMaterials.TerbiumNitrate,2)
                 .outputItems(dust, GTECMaterials.SamaricResidue,2)
+                .outputItems(dust, GTECMaterials.Euxenite,4)
                 .duration(3200).EUt(VA[EV]).save(provider);
 
         ELECTROLYZER_RECIPES.recipeBuilder(GTExtendedChem.id("terbium_completion"))

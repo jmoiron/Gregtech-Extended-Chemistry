@@ -160,6 +160,15 @@ public class PlatinumLineRecipes {
                 .blastFurnaceTemp(775)
                 .duration(200).EUt(VA[MV]).save(provider);
 
+        BLAST_RECIPES.recipeBuilder(GTExtendedChem.id("rhodium_sulfate_from_platinum_residue"))
+                .inputItems(dust, GTECMaterials.PlatinumResidue,2)
+                .inputItems(dust, GTECMaterials.PotassiumDisulfate, 1)
+                .circuitMeta(3)
+                .outputFluids(RhodiumSulfate.getFluid(720))
+                .outputItems(dust, GTECMaterials.LeachResidue, 2)
+                .blastFurnaceTemp(775)
+                .duration(400).EUt(VA[MV]).save(provider);
+
         CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("rhodium_sulfate_to_solution"))
                 .circuitMeta(1)
                 .inputFluids(Water.getFluid(10000))
