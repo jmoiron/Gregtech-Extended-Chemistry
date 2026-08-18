@@ -3,6 +3,7 @@ package argent_matter.gtec.data.recipe.disabled;
 import argent_matter.gtec.GTExtendedChem;
 import argent_matter.gtec.common.data.GTECMaterials;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraftforge.fml.ModList;
 import java.util.function.Consumer;
 import static com.gregtechceu.gtceu.api.GTValues.*;
 import static com.gregtechceu.gtceu.api.data.tag.TagPrefix.*;
@@ -254,6 +255,22 @@ public class PlatinumLineRecipes {
                 .outputItems(dust, AmmoniumChloride, 2)
                 .circuitMeta(2)
                 .duration(400).EUt(VA[MV]).save(provider);
+
+        if (!ModList.get().isLoaded("gtnn")) {
+            CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("ammonium_chloride_fluid"))
+                    .inputFluids(Ammonia.getFluid(1000))
+                    .inputFluids(HydrochloricAcid.getFluid(1000))
+                    .outputFluids(AmmoniumChloride.getFluid(1000))
+                    .circuitMeta(1)
+                    .duration(15).EUt(VA[LV]).save(provider);
+
+            LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("ammonium_chloride_fluid_large"))
+                    .inputFluids(Ammonia.getFluid(1000))
+                    .inputFluids(HydrochloricAcid.getFluid(1000))
+                    .outputFluids(AmmoniumChloride.getFluid(1000))
+                    .circuitMeta(1)
+                    .duration(15).EUt(VA[LV]).save(provider);
+        }
 
         MIXER_RECIPES.recipeBuilder(GTExtendedChem.id("rhodium_filter_cake_solution"))
                 .inputItems(dust, GTECMaterials.RhodiumFilterCake,1)
