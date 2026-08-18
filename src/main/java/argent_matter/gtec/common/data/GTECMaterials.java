@@ -28,8 +28,16 @@ public class GTECMaterials {
         Gadolinium.setProperty(PropertyKey.DUST, new DustProperty());
         Holmium.setProperty(PropertyKey.DUST, new DustProperty());
         Terbium.setProperty(PropertyKey.DUST, new DustProperty());
+        addFluid(AmmoniumChloride);
         RutheniumTetroxide.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
         Iodine.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.GAS, new FluidBuilder()));
+    }
+
+    public static void addFluid(Material material) {
+        if (!material.hasProperty(PropertyKey.FLUID)) {
+            material.setProperty(PropertyKey.FLUID,
+                    new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
+        }
     }
 
     private static Material.Builder mat(String path, int color) {
