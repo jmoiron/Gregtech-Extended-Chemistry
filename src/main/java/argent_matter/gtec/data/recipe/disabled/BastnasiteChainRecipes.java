@@ -81,7 +81,7 @@ public class BastnasiteChainRecipes {
                 .inputFluids(GTECMaterials.FilteredBastnasiteMud.getFluid(1000))
                 .outputItems(dust, GTECMaterials.BastnasiteRareEarthOxides,1)
                 .blastFurnaceTemp(1400)
-                .duration(500).EUt(VA[EV]).save(provider);
+                .duration(500).EUt(600).save(provider);
 
         CHEMICAL_BATH_RECIPES.recipeBuilder(GTExtendedChem.id("acid_leached_bastnasite_rare_earth_oxides_dust"))
                 .inputItems(dust, GTECMaterials.BastnasiteRareEarthOxides,1)
@@ -104,10 +104,18 @@ public class BastnasiteChainRecipes {
                 .outputItems(dust, GTECMaterials.WetRareEarthOxides,1)
                 .duration(100).EUt(VA[LV]).save(provider);
 
-        LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("cerium_oxidesed_rare_earth_oxides_dust"))
+        CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("cerium_oxidesed_rare_earth_oxides_dust"))
                 .inputItems(dust, GTECMaterials.WetRareEarthOxides,1)
                 .inputFluids(Fluorine.getFluid(4000))
                 .outputItems(dust, GTECMaterials.CeriumOxidisedRareEarthOxides,1)
+                .outputFluids(HydrofluoricAcid.getFluid(4000))
+                .duration(300).EUt(VA[HV]).save(provider);
+
+        LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("cerium_oxidesed_rare_earth_oxides_dust_large"))
+                .inputItems(dust, GTECMaterials.WetRareEarthOxides,1)
+                .inputFluids(Fluorine.getFluid(4000))
+                .outputItems(dust, GTECMaterials.CeriumOxidisedRareEarthOxides,1)
+                .outputFluids(HydrofluoricAcid.getFluid(4000))
                 .duration(300).EUt(VA[HV]).save(provider);
 
         CENTRIFUGE_RECIPES.recipeBuilder(GTExtendedChem.id("cerium_oxidesed_rare_earth_oxides_dust_separation"))
@@ -130,7 +138,7 @@ public class BastnasiteChainRecipes {
 
         CENTRIFUGE_RECIPES.recipeBuilder(GTExtendedChem.id("bastnasite_rare_earth_oxides_suspension_separation"))
                 .inputFluids(GTECMaterials.BastnasiteRarerEarthOxidessSuspension.getFluid(1000))
-                .chancedOutput(dust, GTECMaterials.NeodymiumRareEarthConcentrate,1,5000,0)
+                .chancedOutput(dust, GTECMaterials.NeodymiumRareEarthConcentrate,1,8000,0)
                 .chancedOutput(dust, GTECMaterials.SamaricRareEarthConcentrate,1,5000,0)
                 .outputFluids(GTECMaterials.DilutedAcetone.getFluid(750))
                 .duration(900).EUt(VA[HV]).save(provider);
@@ -170,9 +178,9 @@ public class BastnasiteChainRecipes {
                 .inputItems(dust, Calcium,4)
                 .outputItems(dust, Holmium,1)
                 .outputItems(dust, GTECMaterials.SamariumTerbiumMixture,4)
-                .outputFluids(GTECMaterials.CalciumFluoride.getFluid(144 * 12))
+                .outputFluids(GTECMaterials.CalciumFluoride.getFluid(12000))
                 .blastFurnaceTemp(1200)
-                .duration(1600).EUt(VA[EV]).save(provider);
+                .duration(1200).EUt(VA[EV]).save(provider);
 
         CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("calcium_fluoride_assembly"))
             .inputItems(dust, Calcium, 1)
