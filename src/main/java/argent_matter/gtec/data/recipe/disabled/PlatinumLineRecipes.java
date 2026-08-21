@@ -336,6 +336,7 @@ public class PlatinumLineRecipes {
                 .inputFluids(GTECMaterials.HotRutheniumTetroxideSolution.getFluid(9000))
                 .outputItems(dustSmall, RutheniumTetroxide, 30)
                 .outputFluids(Water.getFluid(1000))
+                .disableDistilleryRecipes(true)
                 .duration(1500).EUt(VA[HV]).save(provider);
 
         // Ruthenium Completion <----------  Fourth Platinum Line output (im still sane)
