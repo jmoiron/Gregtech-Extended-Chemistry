@@ -28,54 +28,6 @@ public class PlatinumLineRecipes {
                 .outputFluids(GTECMaterials.PlatinumConcentrate.getFluid(2000))
                 .duration(250).EUt(VA[LV]).save(provider);
 
-        CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("dissolve_platinum_metallic_powder_9x"))
-                .inputItems(dust, GTECMaterials.PlatinumMetallicPowder,9)
-                .circuitMeta(9)
-                .inputFluids(AquaRegia.getFluid(18000))
-                .outputItems(dust, GTECMaterials.PlatinumResidue)
-                .outputFluids(GTECMaterials.PlatinumConcentrate.getFluid(18000))
-                .duration(2250).EUt(VA[LV]).save(provider);
-
-        CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("dissolve_bornite_for_platline"))
-                .inputItems(crushedPurified, Bornite,9)
-                .inputItems(dust, GTECMaterials.PlatinumMetallicPowder,9)
-                .inputFluids(AquaRegia.getFluid(20000))
-                .outputItems(dust, GTECMaterials.PlatinumResidue)
-                .outputFluids(GTECMaterials.PlatinumConcentrate.getFluid(20000))
-                .duration(2250).EUt(VA[LV]).save(provider);
-
-        CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("dissolve_chalcopyrite_for_platline"))
-                .inputItems(crushedPurified, Chalcopyrite,9)
-                .inputItems(dust, GTECMaterials.PlatinumMetallicPowder,9)
-                .inputFluids(AquaRegia.getFluid(20000))
-                .outputItems(dust, GTECMaterials.PlatinumResidue)
-                .outputFluids(GTECMaterials.PlatinumConcentrate.getFluid(20000))
-                .duration(2250).EUt(VA[LV]).save(provider);
-
-        CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("dissolve_cooperite_for_platline"))
-                .inputItems(crushedPurified, Cooperite,9)
-                .inputItems(dust, GTECMaterials.PlatinumMetallicPowder,9)
-                .inputFluids(AquaRegia.getFluid(20000))
-                .outputItems(dust, GTECMaterials.PlatinumResidue)
-                .outputFluids(GTECMaterials.PlatinumConcentrate.getFluid(20000))
-                .duration(2250).EUt(VA[LV]).save(provider);
-
-        CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("dissolve_tetrahedrite_for_platline"))
-                .inputItems(crushedPurified, Tetrahedrite,9)
-                .inputItems(dust, GTECMaterials.PlatinumMetallicPowder,9)
-                .inputFluids(AquaRegia.getFluid(20000))
-                .outputItems(dust, GTECMaterials.PlatinumResidue)
-                .outputFluids(GTECMaterials.PlatinumConcentrate.getFluid(20000))
-                .duration(2250).EUt(VA[LV]).save(provider);
-
-        CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("dissolve_pentlandite_for_platline"))
-                .inputItems(crushedPurified, Pentlandite,9)
-                .inputItems(dust, GTECMaterials.PlatinumMetallicPowder,9)
-                .inputFluids(AquaRegia.getFluid(20000))
-                .outputItems(dust, GTECMaterials.PlatinumResidue)
-                .outputFluids(GTECMaterials.PlatinumConcentrate.getFluid(20000))
-                .duration(2250).EUt(VA[LV]).save(provider);
-
         // Platinum Concentrate Processing
 
         LARGE_CHEMICAL_RECIPES.recipeBuilder(GTExtendedChem.id("tiny_platinum_dusts"))
